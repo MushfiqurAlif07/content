@@ -1,28 +1,21 @@
 ---
-title: URLSearchParams.entries()
+title: "URLSearchParams: entries() method"
+short-title: entries()
 slug: Web/API/URLSearchParams/entries
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - URL API
-  - URLSearchParams
 browser-compat: api.URLSearchParams.entries
 ---
-{{APIRef("URL API")}}
+
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 The **`entries()`** method of the
 {{domxref("URLSearchParams")}} interface returns an
 {{jsxref("Iteration_protocols",'iterator')}} allowing iteration through all key/value
-pairs contained in this object. The iterator returns key/value pairs in the same order as they appear in the query string. The key and value of each pair are
-string objects.
-
-{{availableinworkers}}
+pairs contained in this object. The iterator returns key/value pairs in the same order as they appear in the query string. The key and value of each pair are strings.
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 
@@ -38,17 +31,17 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
 ```js
 // Create a test URLSearchParams object
-var searchParams = new URLSearchParams("key1=value1&key2=value2");
+const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Display the key/value pairs
-for(var pair of searchParams.entries()) {
-   console.log(pair[0]+ ', '+ pair[1]);
+for (const [key, value] of searchParams.entries()) {
+  console.log(`${key}, ${value}`);
 }
 ```
 
 The result is:
 
-```
+```plain
 key1, value1
 key2, value2
 ```

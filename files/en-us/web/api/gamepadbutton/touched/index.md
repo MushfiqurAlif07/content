@@ -1,16 +1,12 @@
 ---
-title: GamepadButton.touched
+title: "GamepadButton: touched property"
+short-title: touched
 slug: Web/API/GamepadButton/touched
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Property
-  - Reference
 browser-compat: api.GamepadButton.touched
 ---
-{{APIRef("Gamepad API")}}
+
+{{APIRef("Gamepad API")}}{{SecureContext_Header}}
 
 The **`touched`** property of the
 {{domxref("GamepadButton")}} interface returns a `boolean` indicating whether
@@ -27,7 +23,7 @@ A {{jsxref("Boolean")}}. True if touched.
 ```js
 let gp = navigator.getGamepads()[0]; // Get the first gamepad object
 
-if(gp.buttons[0].touched == true) {
+if (gp.buttons[0].touched) {
   // respond to button being touched
 }
 ```

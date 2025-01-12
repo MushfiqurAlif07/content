@@ -1,24 +1,18 @@
 ---
-title: AudioNode.disconnect()
+title: "AudioNode: disconnect() method"
+short-title: disconnect()
 slug: Web/API/AudioNode/disconnect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioNode
-  - Disconnect
-  - Method
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioNode.disconnect
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`disconnect()`** method of the {{ domxref("AudioNode") }} interface lets you disconnect one or more nodes from the node on which the method is called.
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 
@@ -47,12 +41,10 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
 
-var audioCtx = new AudioContext();
-
-var oscillator = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
+const oscillator = audioCtx.createOscillator();
+const gainNode = audioCtx.createGain();
 
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);

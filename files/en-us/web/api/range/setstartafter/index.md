@@ -1,14 +1,11 @@
 ---
-title: Range.setStartAfter()
+title: "Range: setStartAfter() method"
+short-title: setStartAfter()
 slug: Web/API/Range/setStartAfter
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.setStartAfter
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.setStartAfter()`** method sets the start position
@@ -18,7 +15,7 @@ for the `referenceNode`.
 
 ## Syntax
 
-```js
+```js-nolint
 setStartAfter(referenceNode)
 ```
 
@@ -34,8 +31,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var range = document.createRange();
-var referenceNode = document.getElementsByTagName("div").item(0);
+const range = document.createRange();
+const referenceNode = document.getElementsByTagName("div").item(0);
 
 range.setStartAfter(referenceNode);
 ```

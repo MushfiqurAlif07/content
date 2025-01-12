@@ -1,33 +1,29 @@
 ---
-title: EncodedVideoChunk.copyTo()
+title: "EncodedVideoChunk: copyTo() method"
+short-title: copyTo()
 slug: Web/API/EncodedVideoChunk/copyTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - copyTo
-  - EncodedVideoChunk
 browser-compat: api.EncodedVideoChunk.copyTo
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`copyTo()`** method of the {{domxref("EncodedVideoChunk")}} interface copies the encoded chunk of video data.
 
 ## Syntax
 
-```js
+```js-nolint
 copyTo(destination)
 ```
 
 ### Parameters
 
 - `destination`
-  - : A {{domxref("BufferSource")}} that the data can be copied to.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} that the data can be copied to.
 
 ### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -35,10 +31,10 @@ In the following example an {{domxref("EncodedVideoChunk")}} is created then cop
 
 ```js
 const init = {
-  type: 'key',
+  type: "key",
   data: videoBuffer,
   timestamp: 23000000,
-  duration: 2000000
+  duration: 2000000,
 };
 chunk = EncodedVideoChunk(init);
 

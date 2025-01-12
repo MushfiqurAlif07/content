@@ -1,53 +1,45 @@
 ---
-title: 'HTMLElement: drop event'
+title: "HTMLElement: drop event"
+short-title: drop
 slug: Web/API/HTMLElement/drop_event
 page-type: web-api-event
-tags:
-  - DOM
-  - Drag Event
-  - Drop
-  - Event
-  - HTML 5
-  - Reference
-  - drag and drop
 browser-compat: api.HTMLElement.drop_event
 ---
+
 {{APIRef}}
 
-The **`drop`** event is fired when an element or text selection is dropped on a valid drop target.
+The **`drop`** event is fired when an element or text selection is dropped on a valid drop target. To ensure that the `drop` event always fires as expected, you should always include a [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) call in the part of your code which handles the [`dragover`](/en-US/docs/Web/API/HTMLElement/dragover_event) event.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Default action</th>
-      <td>Varies</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/ondrop", "ondrop")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is cancelable and may bubble up to the {{domxref("Document")}} and {{domxref("Window")}} objects.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("drop", (event) => {});
+
+ondrop = (event) => {};
+```
+
+## Event type
+
+A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("DragEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : The data that is transferred during a drag-and-drop interaction.
 
 ## Examples
 
-### A minimal drag and drop example
+### A minimal drag-and-drop example
 
-In this example, we have a draggable element inside a container. Try grabbing the element, dragging it over the other container, and then releasing it.
+In this example, we have a draggable element inside a container. Try grabbing the element, dragging it over the other container, and releasing it.
 
 We use three event handlers here:
 
@@ -61,18 +53,16 @@ For a more complete example of drag and drop, see the page for the [`drag`](/en-
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true">
-    This div is draggable
-  </div>
+  <div id="draggable" draggable="true">This div is draggable</div>
 </div>
-<div class="dropzone" id="droptarget"></div>
+<div class="dropzone" id="drop-target"></div>
 ```
 
 #### CSS
 
 ```css
 body {
-  /* Prevent the user selecting text in the example */
+  /* Prevent the user from selecting text in the example */
   user-select: none;
 }
 
@@ -96,22 +86,22 @@ body {
 let dragged = null;
 
 const source = document.getElementById("draggable");
-source.addEventListener("dragstart", event => {
+source.addEventListener("dragstart", (event) => {
   // store a ref. on the dragged elem
   dragged = event.target;
 });
 
-const target = document.getElementById("droptarget");
-target.addEventListener("dragover", event => {
+const target = document.getElementById("drop-target");
+target.addEventListener("dragover", (event) => {
   // prevent default to allow drop
   event.preventDefault();
 });
 
-target.addEventListener("drop", event => {
-  // prevent default action (open as link for some elements)
+target.addEventListener("drop", (event) => {
+  // prevent default action (open as a link for some elements)
   event.preventDefault();
   // move dragged element to the selected drop target
-  if (event.target.className == "dropzone") {
+  if (event.target.className === "dropzone") {
     dragged.parentNode.removeChild(dragged);
     event.target.appendChild(dragged);
   }
@@ -140,9 +130,3 @@ target.addEventListener("drop", event => {
   - {{domxref("HTMLElement/dragover_event", "dragover")}}
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
-
-- This event on other targets:
-
-  - {{domxref("Window")}}: {{domxref("Window/drop_event", "drop")}} event
-  - {{domxref("Document")}}: {{domxref("Document/drop_event", "drop")}} event
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/drop_event", "drop")}} event

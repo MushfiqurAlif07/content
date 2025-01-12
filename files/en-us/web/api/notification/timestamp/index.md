@@ -1,21 +1,17 @@
 ---
-title: Notification.timestamp
+title: "Notification: timestamp property"
+short-title: timestamp
 slug: Web/API/Notification/timestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - timeStamp
+status:
+  - experimental
 browser-compat: api.Notification.timestamp
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 The **`timestamp`** read-only property of the
-{{domxref("Notification")}} interface returns a {{domxref("DOMTimeStamp")}}, as
+{{domxref("Notification")}} interface returns a number, as
 specified in the `timestamp` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
@@ -27,7 +23,7 @@ missed message could be set in the past.
 
 ## Value
 
-A {{domxref("DOMTimeStamp")}}.
+A number representing a timestamp, given as {{Glossary("Unix time")}} in milliseconds.
 
 ## Examples
 
@@ -36,16 +32,16 @@ created, then the notification is fired using the `Notification()`
 constructor.
 
 ```js
-var dts = Math.floor(Date.now());
+const dts = Math.floor(Date.now());
 
-var options = {
-  body: 'Do you like my body?',
-  timestamp: dts
-}
+const options = {
+  body: "Your code submission has received 3 new review comments.",
+  timestamp: dts,
+};
 
-var n = new Notification('Test notification',options);
+const n = new Notification("New review activity", options);
 
-console.log(n.timestamp) // should log original timestamp
+console.log(n.timestamp); // Logs the timestamp
 ```
 
 ## Specifications

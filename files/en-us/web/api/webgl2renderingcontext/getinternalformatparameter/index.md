@@ -1,16 +1,12 @@
 ---
-title: WebGL2RenderingContext.getInternalformatParameter()
+title: "WebGL2RenderingContext: getInternalformatParameter() method"
+short-title: getInternalformatParameter()
 slug: Web/API/WebGL2RenderingContext/getInternalformatParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getInternalformatParameter
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.getInternalformatParameter()`**
 method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns
@@ -18,7 +14,7 @@ information about implementation-dependent support for internal formats.
 
 ## Syntax
 
-```js
+```js-nolint
 getInternalformatParameter(target, internalformat, pname)
 ```
 
@@ -53,8 +49,11 @@ Depends on the requested information (as specified with `pname`). It is an
 ## Examples
 
 ```js
-var samples = gl.getInternalformatParameter(gl.RENDERBUFFER,
-                                            gl.RGBA8, gl.SAMPLES);
+const samples = gl.getInternalformatParameter(
+  gl.RENDERBUFFER,
+  gl.RGBA8,
+  gl.SAMPLES,
+);
 ```
 
 ## Specifications

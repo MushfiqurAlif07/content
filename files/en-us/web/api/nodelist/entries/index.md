@@ -1,16 +1,11 @@
 ---
-title: NodeList.entries()
+title: "NodeList: entries() method"
+short-title: entries()
 slug: Web/API/NodeList/entries
 page-type: web-api-instance-method
-tags:
-  - DOM
-  - Iteration
-  - Method
-  - Node
-  - NodeList
-  - Polyfill
 browser-compat: api.NodeList.entries
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeList.entries()`** method returns an
@@ -19,8 +14,8 @@ contained in this object. The values are {{domxref("Node")}} objects.
 
 ## Syntax
 
-```js
-list.entries();
+```js-nolint
+entries()
 ```
 
 ### Return value
@@ -30,25 +25,25 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 ## Example
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
+const node = document.createElement("div");
+const kid1 = document.createElement("p");
+const kid2 = document.createTextNode("hey");
+const kid3 = document.createElement("span");
 node.appendChild(kid1);
 node.appendChild(kid2);
 node.appendChild(kid3);
 
-var list = node.childNodes;
+const list = node.childNodes;
 
-// Using for..of
-for(var entry of list.entries()) {
+// Using for...of
+for (const entry of list.entries()) {
   console.log(entry);
 }
 ```
 
 results in:
 
-```
+```plain
 Array [ 0, <p> ]
 Array [ 1, #text "hey" ]
 Array [ 2, <span> ]

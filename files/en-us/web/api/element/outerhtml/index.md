@@ -1,21 +1,11 @@
 ---
-title: Element.outerHTML
+title: "Element: outerHTML property"
+short-title: outerHTML
 slug: Web/API/Element/outerHTML
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Element
-  - NeedsMobileBrowserCompatibility
-  - Parsing
-  - Property
-  - Reference
-  - Serialization
-  - Serializing
-  - outerHTML
 browser-compat: api.Element.outerHTML
 ---
+
 {{APIRef("DOM")}}
 
 The **`outerHTML`** attribute of the {{ domxref("Element") }}
@@ -35,6 +25,8 @@ Setting the value of `outerHTML` replaces the element and all of its
 descendants with a new DOM tree constructed by parsing the specified
 `htmlString`.
 
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.outerHTML = null` is equivalent to `elt.outerHTML = ""`.
+
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
@@ -46,9 +38,9 @@ descendants with a new DOM tree constructed by parsing the specified
 
 ## Examples
 
-Getting the value of an element's `outerHTML` property:
+### Getting the value of an element's outerHTML property
 
-### HTML
+#### HTML
 
 ```html
 <div id="d">
@@ -57,19 +49,19 @@ Getting the value of an element's `outerHTML` property:
 </div>
 ```
 
-### Javascript
+#### JavaScript
 
 ```js
-var d = document.getElementById("d");
+const d = document.getElementById("d");
 console.log(d.outerHTML);
 
 // The string '<div id="d"><p>Content</p><p>Further Elaborated</p></div>'
 // is written to the console window
 ```
 
-Replacing a node by setting the `outerHTML` property:
+### Replacing a node by setting the outerHTML property
 
-### HTML
+#### HTML
 
 ```html
 <div id="container">
@@ -77,11 +69,11 @@ Replacing a node by setting the `outerHTML` property:
 </div>
 ```
 
-### Javascript
+#### JavaScript
 
 ```js
-var container = document.getElementById("container");
-var d = document.getElementById("d");
+const container = document.getElementById("container");
+const d = document.getElementById("d");
 
 console.log(container.firstElementChild.nodeName); // logs "DIV"
 
@@ -95,13 +87,12 @@ console.log(container.firstElementChild.nodeName); // logs "P"
 
 ## Notes
 
-If the element has no parent element, setting its `outerHTML` property will
-not change it or its descendants. Many browsers will also throw an exception. For
-example:
+If the element has no parent node, setting its `outerHTML` property will not change it
+or its descendants. For example:
 
 ```js
-var div = document.createElement("div");
-div.outerHTML = "<div class=\"test\">test</div>";
+const div = document.createElement("div");
+div.outerHTML = '<div class="test">test</div>';
 console.log(div.outerHTML); // output: "<div></div>"
 ```
 
@@ -110,7 +101,7 @@ Also, while the element will be replaced in the document, the variable whose
 element:
 
 ```js
-var p = document.getElementsByTagName("p")[0];
+const p = document.querySelector("p");
 console.log(p.nodeName); // shows: "P"
 p.outerHTML = "<div>This div replaced a paragraph.</div>";
 console.log(p.nodeName); // still "P";
@@ -119,7 +110,7 @@ console.log(p.nodeName); // still "P";
 The returned value will contain HTML escaped attributes:
 
 ```js
-var anc = document.createElement("a");
+const anc = document.createElement("a");
 anc.href = "https://developer.mozilla.org?a=b&c=d";
 console.log(anc.outerHTML); // output: "<a href='https://developer.mozilla.org?a=b&amp;c=d'></a>"
 ```

@@ -1,16 +1,12 @@
 ---
-title: WebGL2RenderingContext.getSamplerParameter()
+title: "WebGL2RenderingContext: getSamplerParameter() method"
+short-title: getSamplerParameter()
 slug: Web/API/WebGL2RenderingContext/getSamplerParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getSamplerParameter
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.getSamplerParameter()`** method
 of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns parameter
@@ -18,7 +14,7 @@ information of a {{domxref("WebGLSampler")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 getSamplerParameter(sampler, pname)
 ```
 
@@ -57,7 +53,7 @@ Depends on the `pname` parameter, either a {{domxref("WebGL_API/Types", "GLenum"
 ## Examples
 
 ```js
-var sampler = gl.createSampler();
+const sampler = gl.createSampler();
 gl.getSamplerParameter(sampler, gl.TEXTURE_COMPARE_FUNC);
 ```
 

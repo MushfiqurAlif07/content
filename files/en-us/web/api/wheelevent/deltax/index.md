@@ -1,16 +1,11 @@
 ---
-title: WheelEvent.deltaX
+title: "WheelEvent: deltaX property"
+short-title: deltaX
 slug: Web/API/WheelEvent/deltaX
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - WheelEvent
 browser-compat: api.WheelEvent.deltaX
 ---
+
 {{APIRef("UI Events")}}
 
 The **`WheelEvent.deltaX`** read-only property is a
@@ -24,7 +19,10 @@ A number.
 ## Examples
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaX": 4, "deltaMode": 0});
+const syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaX: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaX);
 ```
@@ -39,5 +37,5 @@ console.log(syntheticEvent.deltaX);
 
 ## See also
 
-- {{ event("wheel") }}
+- {{domxref("Element/wheel_event","wheel")}}
 - {{domxref("WheelEvent")}}

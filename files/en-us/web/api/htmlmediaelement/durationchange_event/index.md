@@ -1,49 +1,28 @@
 ---
-title: 'HTMLMediaElement: durationchange event'
+title: "HTMLMediaElement: durationchange event"
+short-title: durationchange
 slug: Web/API/HTMLMediaElement/durationchange_event
 page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
 browser-compat: api.HTMLMediaElement.durationchange_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `durationchange` event is fired when the `duration` attribute has been updated.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Target</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">Default Action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers.ondurationchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("durationchange", (event) => {});
+
+ondurationchange = (event) => {};
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -52,20 +31,20 @@ These examples add an event listener for the HTMLMediaElement's `durationchange`
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('durationchange', (event) => {
-  console.log('Not sure why, but the duration of the video has changed.');
+video.addEventListener("durationchange", (event) => {
+  console.log("Not sure why, but the duration of the video has changed.");
 });
 ```
 
 Using the `ondurationchange` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.ondurationchange = (event) => {
-  console.log('Not sure why, but the duration of the video has changed.');
+  console.log("Not sure why, but the duration of the video has changed.");
 };
 ```
 
@@ -88,7 +67,6 @@ video.ondurationchange = (event) => {
 - The HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} event
-- The HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}} event

@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.deleteTexture()
+title: "WebGLRenderingContext: deleteTexture() method"
+short-title: deleteTexture()
 slug: Web/API/WebGLRenderingContext/deleteTexture
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteTexture
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.deleteTexture()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
@@ -20,7 +15,7 @@ been deleted.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteTexture(texture)
 ```
 
@@ -38,11 +33,11 @@ None ({{jsxref("undefined")}}).
 ### Deleting a texture
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var texture = gl.createTexture();
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
+const texture = gl.createTexture();
 
-// ...
+// …
 
 gl.deleteTexture(texture);
 ```

@@ -1,44 +1,39 @@
 ---
-title: 'HTMLElement: dragstart event'
+title: "HTMLElement: dragstart event"
+short-title: dragstart
 slug: Web/API/HTMLElement/dragstart_event
 page-type: web-api-event
-tags:
-  - DOM
-  - Event
-  - Reference
-  - drag and drop
 browser-compat: api.HTMLElement.dragstart_event
 ---
+
 {{APIRef}}
 
 The `dragstart` event is fired when the user starts dragging an element or text selection.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Default action</th>
-      <td>Initiate the drag-and-drop operation.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("DragEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/ondragstart", "ondragstart")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is cancelable and may bubble up to the {{domxref("Document")}} and {{domxref("Window")}} objects.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("dragstart", (event) => {});
+
+ondragstart = (event) => {};
+```
+
+## Event type
+
+A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("DragEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : The data that is transferred during a drag-and-drop interaction.
 
 ## Examples
 
@@ -46,17 +41,15 @@ The `dragstart` event is fired when the user starts dragging an element or text 
 
 In this example, we have a draggable element inside a container. Try grabbing the element, dragging it, and then releasing it.
 
-We listen for the `dragstart` event to make the element half transparent while it is being dragged.
+We listen for the `dragstart` event to make the element half transparent while dragged.
 
-For a more complete example of drag and drop, see the page for the [`drag`](/en-US/docs/Web/API/HTMLElement/drag_event) event.
+For a complete example of drag and drop, see the page for the [`drag`](/en-US/docs/Web/API/HTMLElement/drag_event) event.
 
 #### HTML
 
 ```html
 <div id="container">
-  <div id="draggable" draggable="true">
-    This div is draggable
-  </div>
+  <div id="draggable" draggable="true">This div is draggable</div>
 </div>
 <div class="dropzone"></div>
 ```
@@ -65,7 +58,7 @@ For a more complete example of drag and drop, see the page for the [`drag`](/en-
 
 ```css
 body {
-  /* Prevent the user selecting text in the example */
+  /* Prevent the user from selecting text in the example */
   user-select: none;
 }
 
@@ -82,7 +75,7 @@ body {
 }
 
 .dragging {
-  opacity: .5;
+  opacity: 0.5;
 }
 ```
 
@@ -90,12 +83,12 @@ body {
 
 ```js
 const source = document.getElementById("draggable");
-source.addEventListener("dragstart", event => {
+source.addEventListener("dragstart", (event) => {
   // make it half transparent
   event.target.classList.add("dragging");
 });
 
-source.addEventListener("dragend", event => {
+source.addEventListener("dragend", (event) => {
   // reset the transparency
   event.target.classList.remove("dragging");
 });
@@ -123,9 +116,3 @@ source.addEventListener("dragend", event => {
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- This event on other targets:
-
-  - {{domxref("Window")}}: {{domxref("Window/dragstart_event", "dragstart")}} event
-  - {{domxref("Document")}}: {{domxref("Document/dragstart_event", "dragstart")}} event
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragstart_event", "dragstart")}} event

@@ -1,27 +1,20 @@
 ---
-title: ChannelSplitterNode()
+title: "ChannelSplitterNode: ChannelSplitterNode() constructor"
+short-title: ChannelSplitterNode()
 slug: Web/API/ChannelSplitterNode/ChannelSplitterNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - ChannelSplitterNode
-  - Constructor
-  - Reference
-  - Splitter
-  - Web Audio
-  - Web Audio API
 browser-compat: api.ChannelSplitterNode.ChannelSplitterNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`ChannelSplitterNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new {{domxref("ChannelSplitterNode")}} object instance, representing a node that splits the input into a separate output for each of the source node's audio channels.
 
 ## Syntax
 
-```js
-new ChannelSpitterNode(context)
-new ChannelSpitterNode(context, options)
+```js-nolint
+new ChannelSplitterNode(context)
+new ChannelSplitterNode(context, options)
 ```
 
 ### Parameters
@@ -32,7 +25,7 @@ new ChannelSpitterNode(context, options)
 
   - : An object defining the properties you want the `ChannelSplitterNode` to have:
     - `numberOfOutputs` {{optional_inline}}
-      - : A number defining the number of inputs the {{domxref("ChannelSplitterNode")}} should have. If not specified, the default value used is 6.
+      - : A number defining the number of outputs the {{domxref("ChannelSplitterNode")}} should have. If not specified, the default value used is 6.
     - `channelCount` {{optional_inline}}
       - : An integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node.
         (See {{domxref("AudioNode.channelCount")}} for more information.)
@@ -53,13 +46,13 @@ A new {{domxref("ChannelSplitterNode")}} object instance.
 ## Examples
 
 ```js
-var ac = new AudioContext();
+const ac = new AudioContext();
 
-var options = {
-  numberOfOutputs : 2
-}
+const options = {
+  numberOfOutputs: 2,
+};
 
-var mySplitter = new ChannelSplitterNode(ac, options);
+const mySplitter = new ChannelSplitterNode(ac, options);
 ```
 
 ## Specifications

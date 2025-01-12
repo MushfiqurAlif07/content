@@ -1,23 +1,19 @@
 ---
-title: 'ARIA: menuitem role'
+title: "ARIA: menuitem role"
 slug: Web/Accessibility/ARIA/Roles/menuitem_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - menuitem
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menuitem
-  - https://w3c.github.io/aria-practices/#menu
+  - https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-navigation/
 ---
+
+{{AccessibilitySidebar}}
 
 The `menuitem` role indicates the element is an option in a set of choices contained by a `menu` or `menubar`.
 
 ## Description
 
-A `menuitem` is one of the three types of options in a set of choices contained by a [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role); the other two being [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role) and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role). The `menuitem` is only found as a descendant of, or owned by, elements with role `menu` or `menubar`, optionally nested within an with role [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) that is contained in, or owned by, a menu.
+A `menuitem` is one of the three types of options in a set of choices contained by a [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role); the other two being [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role) and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role). The `menuitem` is only found as a descendant of, or owned by, elements with role `menu` or `menubar`, optionally nested within an element with role [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) that is contained in, or owned by, a menu.
 
 If the `menuitem` is not a descendant of a menu in the DOM, include the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute on menu to indicate the relationship. If `aria-owns` is set on the menu container to include elements that are not DOM children of the container, those elements will appear in the reading order in the sequence they are referenced and after any items that are DOM children in supporting technologies. Ensure the visual focus order matches the assistive technology reading order.
 
@@ -35,7 +31,7 @@ Every `menuitem` must have an accessible name. This name comes from the element'
   - : A widget providing a list of choices. Required context role (or `menubar`)
 - [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role) role
   - : A presentation of a `menu` that usually remains visible and is usually presented horizontally. Required context role (or `menu`)
-- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)  role
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
   - : Can be used to identify a set of related `menuitem`s within or otherwise owned by a `menu` or `menubar`
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
   - : Indicates the element is perceivable but disabled, so it is not operable
@@ -51,7 +47,7 @@ Every `menuitem` must have an accessible name. This name comes from the element'
 - <kbd>Up Arrow</kbd>
   - : Moves focus to the previous item, optionally wrapping from the first to the last. Optionally, if the `menuitem` is in a menubar and has a submenu, opens the submenu and places focus on the last item in the submenu.
 - <kbd>Right Arrow</kbd>
-  - : If in a `menu` opened with a menubutton and not in a `menubar`, if the menuitem does not have a submenu, does nothing. When focus is in a `menubar`, moves focus to the next item, optionally wrapping from the last to the first. When focus is in a `menu` and on a `menuitem` that has a submenu, opens the submenu and places focus on its first item.When focus is in a `menu` and on an item that does not have a submenu, closes the submenu and any parent menus, moves focus to the next item in the `menubar`, and, if focus is now on a `menuitem` with a submenu, either opens the submenu of that `menuitem` without moving focus into the submenu, or opens the submenu of that `menuitem` and places focus on the first item in the submenu.
+  - : If in a `menu` opened with a menubutton and not in a `menubar`, if the menuitem does not have a submenu, does nothing. When focus is in a `menubar`, moves focus to the next item, optionally wrapping from the last to the first. When focus is in a `menu` and on a `menuitem` that has a submenu, opens the submenu and places focus on its first item. When focus is in a `menu` and on an item that does not have a submenu, closes the submenu and any parent menus, moves focus to the next item in the `menubar`, and, if focus is now on a `menuitem` with a submenu, either opens the submenu of that `menuitem` without moving focus into the submenu, or opens the submenu of that `menuitem` and places focus on the first item in the submenu.
 - <kbd>Left Arrow</kbd>
   - : When focus is in a `menubar`, moves focus to the previous item, optionally wrapping from the first to the last. When focus is in a submenu of an item in a menu, closes the submenu and returns focus to the parent `menuitem`. When focus is in a submenu of an item in a `menubar`, closes the submenu, moves focus to the previous item in the `menubar`, and, if focus is now on a `menuitem` with a submenu, either opens the submenu of that `menuitem` without moving focus into the submenu, or opens the submenu of that `menuitem` and places focus on the first item in the submenu.
 - <kbd>Home</kbd>
@@ -78,16 +74,16 @@ When items in a `menubar` are arranged vertically and items in menu containers a
 ```html
 <div>
   <button id="menubutton" aria-haspopup="true" aria-controls="menu">
-    <img src="hamburger.svg" alt="Page Sections">
+    <img src="hamburger.svg" alt="Page Sections" />
   </button>
   <ul id="menu" role="menu" aria-labelledby="menubutton">
     <li role="presentation">
-      <a role="menuitem" href="#description">
-        Description
-      </a>
+      <a role="menuitem" href="#description">Description</a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#associated_wai-aria_roles_states_and_properties">
+      <a
+        role="menuitem"
+        href="#associated_wai-aria_roles_states_and_properties">
         Associated WAI-ARIA roles, states, and properties
       </a>
     </li>
@@ -97,19 +93,13 @@ When items in a `menubar` are arranged vertically and items in menu containers a
       </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#examples">
-        Examples
-      </a>
+      <a role="menuitem" href="#examples">Examples</a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#specifications">
-        Specifications
-      </a>
+      <a role="menuitem" href="#specifications">Specifications</a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#see_also">
-        See Also
-      </a>
+      <a role="menuitem" href="#see_also">See Also</a>
     </li>
   </ul>
 </div>
@@ -119,17 +109,9 @@ When items in a `menubar` are arranged vertically and items in menu containers a
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`menuitemcheckbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
 - [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [`listitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
 - [`option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

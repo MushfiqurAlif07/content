@@ -1,16 +1,12 @@
 ---
-title: WorkerLocation.protocol
+title: "WorkerLocation: protocol property"
+short-title: protocol
 slug: Web/API/WorkerLocation/protocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WorkerLocation
 browser-compat: api.WorkerLocation.protocol
 ---
-{{ApiRef("WorkerLocation")}}
+
+{{ApiRef("WorkerLocation")}}{{AvailableInWorkers("worker")}}
 
 The **`protocol`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.protocol", "protocol")}} part of the worker's location.
 
@@ -22,7 +18,7 @@ A string.
 
 ```js
 // In a Web worker, on the page https://developer.mozilla.org/en-US/docs/Web
-var result = location.protocol; // Returns 'https:'
+const result = location.protocol; // Returns 'https:'
 ```
 
 ## Specifications
