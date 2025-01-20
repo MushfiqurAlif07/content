@@ -1,23 +1,19 @@
 ---
-title: WebGL2RenderingContext.beginQuery()
+title: "WebGL2RenderingContext: beginQuery() method"
+short-title: beginQuery()
 slug: Web/API/WebGL2RenderingContext/beginQuery
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.beginQuery
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.beginQuery()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) starts an asynchronous query. The
 `target` parameter indicates which kind of query to begin.
 
 ## Syntax
 
-```js
+```js-nolint
 beginQuery(target, query)
 ```
 
@@ -48,10 +44,10 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var query = gl.createQuery();
+const query = gl.createQuery();
 gl.beginQuery(gl.ANY_SAMPLES_PASSED, query);
 
-// ...
+// …
 ```
 
 ## Specifications

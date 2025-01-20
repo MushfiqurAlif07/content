@@ -1,21 +1,12 @@
 ---
-title: 'PaymentResponse: payerdetailchange event'
+title: "PaymentResponse: payerdetailchange event"
+short-title: payerdetailchange
 slug: Web/API/PaymentResponse/payerdetailchange_event
 page-type: web-api-event
-tags:
-  - Commerce
-  - Payment Request API
-  - PaymentResponse
-  - Reference
-  - Response
-  - Validation
-  - Event
-  - payerdetail
-  - payment
-  - validate
 browser-compat: api.PaymentResponse.payerdetailchange_event
 ---
-{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}
 
 A **`payerdetailchange`** event is fired by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentResponse")}} object when the user makes changes to their personal information while filling out a payment request form. This can happen when the payer is retrying to submit its details after an error has been detected.
 
@@ -28,9 +19,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('payerdetailchange', async event => { });
+addEventListener("payerdetailchange", async (event) => {});
 
-onpayerdetailchange = async event => { };
+onpayerdetailchange = async (event) => {};
 ```
 
 ## Event type
@@ -71,7 +62,7 @@ let {
 // Set up a handler for payerdetailchange events, to
 // request corrections as needed.
 
-response.onpayerdetailchange = async ev => {
+response.onpayerdetailchange = async (ev) => {
   const promisesToValidate = [];
   const { payerName, payerEmail, payerPhone } = response;
 
@@ -95,8 +86,8 @@ response.onpayerdetailchange = async ev => {
   // As each validation promise resolves, add the results of the
   // validation to the errors list
 
-  const errors = await Promise.all(promisesToValidate).then(results =>
-    results.reduce((errors, result), Object.assign(errors, result))
+  const errors = await Promise.all(promisesToValidate).then((results) =>
+    results.reduce((errors, result), Object.assign(errors, result)),
   );
 
   // If we found any errors, wait for them to be corrected
@@ -123,10 +114,14 @@ await response.retry({
 You could also set up the event handler using the `addEventListener()` method:
 
 ```js
-response.addEventListener("payerdetailchange", async ev => {
-  ...
-}
+response.addEventListener("payerdetailchange", async (ev) => {
+  // …
+});
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

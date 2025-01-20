@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.createTexture()
+title: "WebGLRenderingContext: createTexture() method"
+short-title: createTexture()
 slug: Web/API/WebGLRenderingContext/createTexture
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.createTexture
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.createTexture()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes a
@@ -19,7 +14,7 @@ The **`WebGLRenderingContext.createTexture()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 createTexture()
 ```
 
@@ -38,9 +33,9 @@ See also the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) on [Using 
 ### Creating a texture
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var texture = gl.createTexture();
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
+const texture = gl.createTexture();
 ```
 
 ## Specifications

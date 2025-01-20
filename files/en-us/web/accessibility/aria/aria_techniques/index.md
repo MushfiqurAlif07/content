@@ -1,12 +1,11 @@
 ---
-title: 'Using ARIA: Roles, states, and properties'
+title: "Using ARIA: Roles, states, and properties"
 slug: Web/Accessibility/ARIA/ARIA_Techniques
-tags:
-  - ARIA
-  - Accessibility
-  - Overview
-  - Reference
+page-type: guide
 ---
+
+{{AccessibilitySidebar}}
+
 ARIA defines semantics that can be applied to elements, with these divided into **roles** (defining a type of user interface element) and **states** and **properties** that are supported by a role. Authors must assign an ARIA role and the appropriate states and properties to an element during its life-cycle, unless the element already has appropriate ARIA semantics (via use of an appropriate HTML element). Addition of ARIA semantics only exposes extra information to a browser's accessibility API, and does not affect a page's DOM.
 
 ## Roles
@@ -21,12 +20,12 @@ ARIA defines semantics that can be applied to elements, with these divided into 
 - [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
 - [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role)
-- [`radio`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role)
+- [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
+- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
 - [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
 - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (when focusable)
-- [`slider`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role)
+- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
 - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 - [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
 - [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
@@ -43,7 +42,7 @@ The techniques below describe each composite role as well as their required and 
 - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) (including [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role) role)
 - [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
 - [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
-- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role) (see [`radio role`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role))
+- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) (see [`radio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role))
 - [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) (including [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) and [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) roles)
 - [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
 - [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
@@ -164,4 +163,4 @@ The techniques below describe each composite role as well as their required and 
 
 ### MicrosoftEdge-specific properties
 
-- [`x-ms-aria-flowfrom`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom) {{Non-standard_Inline}}
+- `x-ms-aria-flowfrom` {{Non-standard_Inline}}

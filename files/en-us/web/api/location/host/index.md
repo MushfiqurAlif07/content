@@ -1,14 +1,11 @@
 ---
-title: location.host
+title: "Location: host property"
+short-title: host
 slug: Web/API/Location/host
 page-type: web-api-instance-property
-tags:
-  - API
-  - Location
-  - Property
-  - Reference
 browser-compat: api.Location.host
 ---
+
 {{ApiRef("Location")}}
 
 The **`host`** property of the {{domxref("Location")}}
@@ -23,17 +20,17 @@ A string.
 ## Examples
 
 ```js
-var anchor = document.createElement("a");
+const anchor = document.createElement("a");
 
-anchor.href = "https://developer.mozilla.org/en-US/Location.host"
-anchor.host == "developer.mozilla.org"
+anchor.href = "https://developer.mozilla.org/en-US/Location.host";
+console.log(anchor.host === "developer.mozilla.org");
 
-anchor.href = "https://developer.mozilla.org:443/en-US/Location.host"
-anchor.host == "developer.mozilla.org"
+anchor.href = "https://developer.mozilla.org:443/en-US/Location.host";
+console.log(anchor.host === "developer.mozilla.org");
 // The port number is not included because 443 is the scheme's default port
 
-anchor.href = "https://developer.mozilla.org:4097/en-US/Location.host"
-anchor.host == "developer.mozilla.org:4097"
+anchor.href = "https://developer.mozilla.org:4097/en-US/Location.host";
+console.log(anchor.host === "developer.mozilla.org:4097");
 ```
 
 ## Specifications

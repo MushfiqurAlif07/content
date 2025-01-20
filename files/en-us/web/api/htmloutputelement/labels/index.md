@@ -1,15 +1,11 @@
 ---
-title: HTMLOutputElement.labels
+title: "HTMLOutputElement: labels property"
+short-title: labels
 slug: Web/API/HTMLOutputElement/labels
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLOutputElement
-  - Property
-  - Reference
 browser-compat: api.HTMLOutputElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLOutputElement.labels`** read-only property returns a
@@ -34,10 +30,10 @@ with the `<output>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const output = document.getElementById("test");
-  for(var i = 0; i < output.labels.length; i++) {
-    console.log(output.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of output.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```

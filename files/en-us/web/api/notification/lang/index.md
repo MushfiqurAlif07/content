@@ -1,17 +1,12 @@
 ---
-title: Notification.lang
+title: "Notification: lang property"
+short-title: lang
 slug: Web/API/Notification/lang
 page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
 browser-compat: api.Notification.lang
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`lang`** read-only property of the
 {{domxref("Notification")}} interface indicates the language used in the notification,
@@ -32,14 +27,14 @@ created, then the notification is fired using the `Notification()`
 constructor.
 
 ```js
-var options = {
-  body: 'Do you like my body?',
-  lang: 'en-US'
-}
+const options = {
+  body: "Your code submission has received 3 new review comments.",
+  lang: "en-US",
+};
 
-var n = new Notification('Test notification',options);
+const n = new Notification("New review activity", options);
 
-console.log(n.lang) // should return 'en-US'
+console.log(n.lang); // "en-US"
 ```
 
 ## Specifications

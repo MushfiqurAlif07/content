@@ -1,16 +1,11 @@
 ---
-title: Window.parent
+title: "Window: parent property"
+short-title: parent
 slug: Web/API/Window/parent
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.parent
 ---
+
 {{APIRef}}
 
 The **`Window.parent`** property is a reference to the parent
@@ -30,7 +25,7 @@ A `Window` or {{htmlelement("iframe")}} object.
 ## Examples
 
 ```js
-if (window.parent != window.top) {
+if (window.parent !== window.top) {
   // We're deeper than one down
 }
 ```

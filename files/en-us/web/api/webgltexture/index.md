@@ -2,13 +2,10 @@
 title: WebGLTexture
 slug: Web/API/WebGLTexture
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
 browser-compat: api.WebGLTexture
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **WebGLTexture** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents an opaque texture object providing storage and state for texturing operations.
 
@@ -49,9 +46,9 @@ The WebXR _opaque texture_ is identical to the standard `WebGLTexture` with the 
 ### Creating a texture
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var texture = gl.createTexture();
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
+const texture = gl.createTexture();
 ```
 
 ## Specifications

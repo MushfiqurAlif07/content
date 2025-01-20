@@ -1,16 +1,12 @@
 ---
-title: WebGL2RenderingContext.deleteSampler()
+title: "WebGL2RenderingContext: deleteSampler() method"
+short-title: deleteSampler()
 slug: Web/API/WebGL2RenderingContext/deleteSampler
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.deleteSampler
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.deleteSampler()`** method of the
 [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) deletes a given
@@ -18,7 +14,7 @@ The **`WebGL2RenderingContext.deleteSampler()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 deleteSampler(sampler)
 ```
 
@@ -37,9 +33,9 @@ None ({{jsxref("undefined")}}).
 `WebGLSampler` objects are not available in WebGL 1.
 
 ```js
-var sampler = gl.createSampler();
+const sampler = gl.createSampler();
 
-// ...
+// …
 
 gl.deleteSampler(sampler);
 ```

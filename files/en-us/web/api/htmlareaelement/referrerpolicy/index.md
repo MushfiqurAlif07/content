@@ -1,21 +1,16 @@
 ---
-title: HTMLAreaElement.referrerPolicy
+title: "HTMLAreaElement: referrerPolicy property"
+short-title: referrerPolicy
 slug: Web/API/HTMLAreaElement/referrerPolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - HTMLAreaElement
-  - Property
-  - Reference
-  - Referrer Policy
 browser-compat: api.HTMLAreaElement.referrerPolicy
 ---
-{{APIRef}}{{SeeCompatTable}}
+
+{{APIRef}}
 
 The
 **`HTMLAreaElement.referrerPolicy`**
-property reflect the HTML {{htmlattrxref("referrerpolicy","area")}} attribute of the
+property reflect the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Element/area#referrerpolicy) attribute of the
 {{HTMLElement("area")}} element defining which referrer is sent when fetching the
 resource.
 
@@ -61,12 +56,12 @@ A string; one of the following:
 ```
 
 ```js
-var elt = document.createElement("area");
+const elt = document.createElement("area");
 elt.href = "/img2.png";
 elt.shape = "rect";
 elt.referrerPolicy = "no-referrer";
 elt.coords = "0,0,100,100";
-var map = document.getElementById("myMap");
+const map = document.getElementById("myMap");
 
 map.appendChild(elt);
 // When clicked, the area's link will not send a referrer header.

@@ -1,23 +1,20 @@
 ---
-title: Element.scrollIntoViewIfNeeded()
+title: "Element: scrollIntoViewIfNeeded() method"
+short-title: scrollIntoViewIfNeeded()
 slug: Web/API/Element/scrollIntoViewIfNeeded
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Non-standard
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Element.scrollIntoViewIfNeeded
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 The **`Element.scrollIntoViewIfNeeded()`** method scrolls the current element into the visible area of the browser window if it's not already within the visible area of the browser window. If the element is already within the visible area of the browser window, then no scrolling takes place. This method is a proprietary variation of the standard [`Element.scrollIntoView()`](/en-US/docs/Web/API/Element/scrollIntoView) method.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollIntoViewIfNeeded()
 scrollIntoViewIfNeeded(centerIfNeeded)
 ```
@@ -38,7 +35,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var element = document.getElementById("my-el");
+const element = document.getElementById("my-el");
 
 element.scrollIntoViewIfNeeded(); // Centers the element in the visible area
 element.scrollIntoViewIfNeeded(false); // Aligns the element to the nearest edge in the visible area

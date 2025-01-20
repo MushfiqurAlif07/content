@@ -1,25 +1,18 @@
 ---
-title: InputEvent()
+title: "InputEvent: InputEvent() constructor"
+short-title: InputEvent()
 slug: Web/API/InputEvent/InputEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - DOM Events
-  - Input
-  - InputEvent
-  - Reference
-  - events
 browser-compat: api.InputEvent.InputEvent
 ---
+
 {{APIRef("UI Events")}}
 
 The **`InputEvent()`** constructor creates a new {{domxref("InputEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new InputEvent(type)
 new InputEvent(type, options)
 ```
@@ -40,9 +33,9 @@ new InputEvent(type, options)
         (such as when deleting characters, for example).
     - `isComposing` {{optional_inline}}
       - : A boolean indicating that the event is part of a composition session,
-        meaning it is after a {{event("compositionstart")}} event but before a {{event("compositionend")}} event. The default is `false`.
+        meaning it is after a {{domxref("Element/compositionstart_event", "compositionstart")}} event but before a {{domxref("Element/compositionend_event", "compositionend")}} event. The default is `false`.
 
-## Return value
+### Return value
 
 A new {{domxref("InputEvent")}} object.
 

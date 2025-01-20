@@ -1,16 +1,12 @@
 ---
-title: WebGL2RenderingContext.getQueryParameter()
+title: "WebGL2RenderingContext: getQueryParameter() method"
+short-title: getQueryParameter()
 slug: Web/API/WebGL2RenderingContext/getQueryParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getQueryParameter
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.getQueryParameter()`** method of
 the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns parameter
@@ -18,7 +14,7 @@ information of a {{domxref("WebGLQuery")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 getQueryParameter(query, pname)
 ```
 
@@ -45,10 +41,10 @@ Depends on the `pname` parameter, either a {{domxref("WebGL_API/Types", "GLuint"
 ## Examples
 
 ```js
-var query = gl.createQuery();
+const query = gl.createQuery();
 gl.beginQuery(gl.ANY_SAMPLES_PASSED, query);
 
-var result = gl.getQueryParameter(query, gl.QUERY_RESULT);
+const result = gl.getQueryParameter(query, gl.QUERY_RESULT);
 ```
 
 ## Specifications

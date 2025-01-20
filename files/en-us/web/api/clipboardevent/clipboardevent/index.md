@@ -1,29 +1,18 @@
 ---
-title: ClipboardEvent()
+title: "ClipboardEvent: ClipboardEvent() constructor"
+short-title: ClipboardEvent()
 slug: Web/API/ClipboardEvent/ClipboardEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - ClipboardEvent
-  - Constructor
-  - Cut
-  - Reference
-  - copy
-  - paste
 browser-compat: api.ClipboardEvent.ClipboardEvent
 ---
+
 {{APIRef("Clipboard API")}}
 
-The **`ClipboardEvent()`** constructor returns a new {{domxref("ClipboardEvent")}},
-representing an event providing information related to modification of the clipboard,
-that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and
-{{domxref("Element/paste_event", "paste")}} events.
+The **`ClipboardEvent()`** constructor returns a new {{domxref("ClipboardEvent")}}, representing an event providing information related to modification of the clipboard, that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} events.
 
 ## Syntax
 
-```js
+```js-nolint
 new ClipboardEvent(type)
 new ClipboardEvent(type, options)
 ```
@@ -37,9 +26,9 @@ new ClipboardEvent(type, options)
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
     - `clipboardData` {{optional_inline}}
       - : A {{domxref("DataTransfer")}} object containing the data concerned by the clipboard event. It defaults to `null`.
-    - `dataType`{{non-standard_inline}} {{optional_inline}}
+    - `dataType` {{non-standard_inline}} {{optional_inline}}
       - : A string containing the MIME-type of the data contained in the `data` argument. It defaults to `""`.
-    - `data`{{non-standard_inline}} {{optional_inline}}
+    - `data` {{non-standard_inline}} {{optional_inline}}
       - : A string containing the data concerned by the clipboard event. It defaults to `""`.
 
 ### Return value

@@ -1,19 +1,15 @@
 ---
 title: TypedArray.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - TypedArray
-  - TypedArrays
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.TypedArray.length
 ---
+
 {{JSRef}}
 
-The **`length`** accessor property represents the length (in elements) of a typed array.
+The **`length`** accessor property of {{jsxref("TypedArray")}} instances returns the length (in elements) of this typed array.
 
-{{EmbedInteractiveExample("pages/js/typedarray-length.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/typedarray-length.html", "shorter")}}
 
 ## Description
 
@@ -24,15 +20,15 @@ The `length` property is an accessor property whose set accessor function is `un
 ### Using the `length` property
 
 ```js
-var buffer = new ArrayBuffer(8);
+const buffer = new ArrayBuffer(8);
 
-var uint8 = new Uint8Array(buffer);
+let uint8 = new Uint8Array(buffer);
 uint8.length; // 8 (matches the length of the buffer)
 
-var uint8 = new Uint8Array(buffer, 1, 5);
+uint8 = new Uint8Array(buffer, 1, 5);
 uint8.length; // 5 (as specified when constructing the Uint8Array)
 
-var uint8 = new Uint8Array(buffer, 2);
+uint8 = new Uint8Array(buffer, 2);
 uint8.length; // 6 (due to the offset of the constructed Uint8Array)
 ```
 
@@ -46,5 +42,5 @@ uint8.length; // 6 (due to the offset of the constructed Uint8Array)
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}

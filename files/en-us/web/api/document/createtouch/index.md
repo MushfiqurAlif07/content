@@ -1,33 +1,31 @@
 ---
-title: Document.createTouch()
+title: "Document: createTouch() method"
+short-title: createTouch()
 slug: Web/API/Document/createTouch
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Method
-  - Mobile
-  - Reference
-  - createTouch
-  - touch
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.createTouch
 ---
-{{APIRef("DOM")}}{{Deprecated_Header}}
+
+{{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`Document.createTouch()`** method creates and returns a new {{DOMxRef("Touch")}} object.
 
-> **Note:** Use the {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}} constructor.
+> [!NOTE]
+> Use the {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}} constructor.
 
 ## Syntax
 
-```js
+```js-nolint
 createTouch(view, target, identifier, pageX, pageY, screenX, screenY)
 ```
 
 ### Parameters
 
-> **Note:** All parameters are optional.
+> [!NOTE]
+> All parameters are optional.
 
 - `view`
   - : The {{DOMxRef("window")}} in which the touch occurred.
@@ -44,7 +42,8 @@ createTouch(view, target, identifier, pageX, pageY, screenX, screenY)
 - `screenY`
   - : The value for {{DOMxRef("Touch.screenY")}}.
 
-> **Note:** Previous versions of this method included the
+> [!NOTE]
+> Previous versions of this method included the
 > following additional parameters but those parameters are not included in either of the
 > standards listed below. Consequently, these parameters should be considered deprecated
 > and not used.
@@ -76,10 +75,10 @@ In following code snippet, two {{DOMxRef("Touch")}} objects are created for the
 `target` element.
 
 ```js
-var target = document.getElementById("target");
+const target = document.getElementById("target");
 
-var touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
-var touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
+const touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
+const touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
 ```
 
 ## Specifications

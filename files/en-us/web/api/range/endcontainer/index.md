@@ -1,14 +1,11 @@
 ---
-title: Range.endContainer
+title: "Range: endContainer property"
+short-title: endContainer
 slug: Web/API/Range/endContainer
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
 browser-compat: api.Range.endContainer
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.endContainer`** read-only property returns the
@@ -22,10 +19,10 @@ A {{domxref("Node")}} object.
 ## Examples
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 endRangeNode = range.endContainer;
 ```
 

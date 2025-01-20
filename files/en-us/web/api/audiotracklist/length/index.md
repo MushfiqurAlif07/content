@@ -1,21 +1,11 @@
 ---
-title: AudioTrackList.length
+title: "AudioTrackList: length property"
+short-title: length
 slug: Web/API/AudioTrackList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - length
-  - list
-  - track
 browser-compat: api.AudioTrackList.length
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("AudioTrackList")}}**
@@ -33,12 +23,11 @@ A number indicating how many audio tracks are included in the
 ## Examples
 
 This snippet gets the number of audio tracks in the first {{HTMLElement("video")}}
-element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector",
-  "querySelector()")}}.
+element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector", "querySelector()")}}.
 
 ```js
-var videoElem = document.querySelector("video");
-var numAudioTracks = 0;
+const videoElem = document.querySelector("video");
+let numAudioTracks = 0;
 
 if (videoElem.audioTracks) {
   numAudioTracks = videoElem.audioTracks.length;

@@ -1,18 +1,12 @@
 ---
-title: IDBDatabase.close()
+title: "IDBDatabase: close() method"
+short-title: close()
 slug: Web/API/IDBDatabase/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
 browser-compat: api.IDBDatabase.close
 ---
-{{ APIRef("IndexedDB") }}
+
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`close()`** method of the {{domxref("IDBDatabase")}}
 interface returns immediately and closes the connection in a separate thread.
@@ -22,11 +16,9 @@ connection are complete. No new transactions can be created for this connection 
 this method is called. Methods that create transactions throw an exception if a closing
 operation is pending.
 
-{{AvailableInWorkers}}
-
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 
@@ -42,15 +34,17 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4); // opening a database.
+const DBOpenRequest = window.indexedDB.open("toDoList", 4); // opening a database.
 
 // Create event handlers for both success and failure of
-DBOpenRequest.onerror = event => {
-  note.innerHTML += "<li>Error loading database.</li>";
+DBOpenRequest.onerror = (event) => {
+  note.appendChild(document.createElement("li")).textContent =
+    "Error loading database.";
 };
 
-DBOpenRequest.onsuccess = event => {
-  note.innerHTML += "<li>Database initialized.</li>";
+DBOpenRequest.onsuccess = (event) => {
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable.
   db = DBOpenRequest.result;
@@ -76,4 +70,4 @@ DBOpenRequest.onsuccess = event => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

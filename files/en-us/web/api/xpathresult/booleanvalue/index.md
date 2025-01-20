@@ -1,23 +1,16 @@
 ---
-title: XPathResult.booleanValue
+title: "XPathResult: booleanValue property"
+short-title: booleanValue
 slug: Web/API/XPathResult/booleanValue
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM XPath API
-  - Property
-  - Reference
-  - XPath
-  - XPathResult
 browser-compat: api.XPathResult.booleanValue
 ---
-{{APIRef("DOM XPath")}}
+
+{{APIRef("DOM XPath")}} {{AvailableInWorkers}}
 
 The read-only **`booleanValue`** property of the
 {{domxref("XPathResult")}} interface returns the boolean value of a result with
 {{domxref("XPathResult.resultType")}} being `BOOLEAN_TYPE`.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -45,14 +38,20 @@ The following example shows the use of the `booleanValue` property.
 ### JavaScript
 
 ```js
-var xpath = "//div/text() = 'XPath example'";
-var result = document.evaluate(xpath, document, null, XPathResult.BOOLEAN_TYPE, null);
+const xpath = "//div/text() = 'XPath example'";
+const result = document.evaluate(
+  xpath,
+  document,
+  null,
+  XPathResult.BOOLEAN_TYPE,
+  null,
+);
 document.querySelector("output").textContent = result.booleanValue;
 ```
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples', 400, 70)}}
 
 ## Specifications
 

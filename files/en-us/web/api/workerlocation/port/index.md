@@ -1,16 +1,12 @@
 ---
-title: WorkerLocation.port
+title: "WorkerLocation: port property"
+short-title: port
 slug: Web/API/WorkerLocation/port
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WorkerLocation
 browser-compat: api.WorkerLocation.port
 ---
-{{ApiRef("WorkerLocation")}}
+
+{{ApiRef("WorkerLocation")}}{{AvailableInWorkers("worker")}}
 
 The **`port`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.port", "port")}} part of the worker's location.
 
@@ -22,7 +18,7 @@ A string.
 
 ```js
 // In a Web worker, on the page http://localhost:8080/
-var result = location.port; // Returns '8080'
+const result = location.port; // Returns '8080'
 ```
 
 ## Specifications

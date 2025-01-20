@@ -1,14 +1,11 @@
 ---
-title: Screen.colorDepth
+title: "Screen: colorDepth property"
+short-title: colorDepth
 slug: Web/API/Screen/colorDepth
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
 browser-compat: api.Screen.colorDepth
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`Screen.colorDepth`** read-only property returns the
@@ -23,7 +20,7 @@ A number.
 
 ```js
 // Check the color depth of the screen
-if ( window.screen.colorDepth < 8) {
+if (window.screen.colorDepth < 8) {
   // Use low-color version of page
 } else {
   // Use regular, colorful page

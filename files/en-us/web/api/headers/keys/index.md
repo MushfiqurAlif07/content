@@ -1,26 +1,20 @@
 ---
-title: Headers.keys()
+title: "Headers: keys() method"
+short-title: keys()
 slug: Web/API/Headers/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch API
-  - Headers
-  - Method
-  - Reference
 browser-compat: api.Headers.keys
 ---
-{{APIRef}}
+
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`Headers.keys()`** method returns an
 {{jsxref("Iteration_protocols",'iterator')}} allowing to go through all keys contained
 in this object. The keys are {{jsxref("String")}} objects.
 
-> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
-
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 
@@ -36,19 +30,19 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
 ```js
 // Create a test Headers object
-var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // Display the keys
-for(var key of myHeaders.keys()) {
-   console.log(key);
+for (const key of myHeaders.keys()) {
+  console.log(key);
 }
 ```
 
 The result is:
 
-```
+```plain
 content-type
 vary
 ```

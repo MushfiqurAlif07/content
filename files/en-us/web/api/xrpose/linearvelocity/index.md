@@ -1,17 +1,12 @@
 ---
-title: XRPose.linearVelocity
+title: "XRPose: linearVelocity property"
+short-title: linearVelocity
 slug: Web/API/XRPose/linearVelocity
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WebXR
-  - XRPose
 browser-compat: api.XRPose.linearVelocity
 ---
-{{APIRef}}
+
+{{APIRef}}{{SecureContext_Header}}
 
 The `linearVelocity` read-only property of the
 {{DOMxRef("XRPose")}} interface is a {{DOMxRef("DOMPointReadOnly")}} describing
@@ -21,7 +16,7 @@ the linear velocity in meters per second relative to the base
 ## Value
 
 A {{DOMxRef("DOMPointReadOnly")}} describing the linear velocity in meters
-per second relative to the base {{DOMxRef("XRSpace")}}. Returns {{jsxref("null")}}
+per second relative to the base {{DOMxRef("XRSpace")}}. Returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 if the user agent can't populate this value.
 
 ## Specifications
@@ -34,4 +29,4 @@ if the user agent can't populate this value.
 
 ## See also
 
-- {{domxref("XRPose.linearVelocity")}}
+- {{domxref("XRPose.angularVelocity")}}

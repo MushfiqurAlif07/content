@@ -1,20 +1,16 @@
 ---
-title: HTMLAnchorElement.referrerPolicy
+title: "HTMLAnchorElement: referrerPolicy property"
+short-title: referrerPolicy
 slug: Web/API/HTMLAnchorElement/referrerPolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Reference
-  - Referrer Policy
 browser-compat: api.HTMLAnchorElement.referrerPolicy
 ---
+
 {{APIRef}}
 
 The
 **`HTMLAnchorElement.referrerPolicy`**
-property reflect the HTML {{htmlattrxref("referrerpolicy","a")}} attribute of the
+property reflect the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Element/a#referrerpolicy) attribute of the
 {{HTMLElement("a")}} element defining which referrer is sent when fetching the resource.
 
 ## Value
@@ -54,13 +50,13 @@ A string; one of the following:
 ## Examples
 
 ```js
-var elt = document.createElement("a");
-var linkText = document.createTextNode("My link");
+const elt = document.createElement("a");
+const linkText = document.createTextNode("My link");
 elt.appendChild(linkText);
 elt.href = "https://developer.mozilla.org/en-US/";
 elt.referrerPolicy = "no-referrer";
 
-var div = document.getElementById("divAround");
+const div = document.getElementById("divAround");
 div.appendChild(elt); // When clicked, the link will not send a referrer header.
 ```
 

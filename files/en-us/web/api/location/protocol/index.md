@@ -1,14 +1,11 @@
 ---
-title: location.protocol
+title: "Location: protocol property"
+short-title: protocol
 slug: Web/API/Location/protocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - Location
-  - Property
-  - Reference
 browser-compat: api.Location.protocol
 ---
+
 {{ApiRef("Location")}}
 
 The **`protocol`** property of the {{domxref("Location")}}
@@ -23,8 +20,8 @@ A string.
 
 ```js
 // Let's an <a id="myAnchor" href="https://developer.mozilla.org/en-US/Location.protocol"> element be in the document
-var anchor = document.getElementById("myAnchor");
-var result = anchor.protocol; // Returns:'https:'
+const anchor = document.getElementById("myAnchor");
+const result = anchor.protocol; // Returns:'https:'
 ```
 
 ## Specifications

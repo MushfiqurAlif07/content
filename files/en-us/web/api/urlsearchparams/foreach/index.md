@@ -1,26 +1,20 @@
 ---
-title: URLSearchParams.forEach()
+title: "URLSearchParams: forEach() method"
+short-title: forEach()
 slug: Web/API/URLSearchParams/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - URLSearchParams
-  - forEach
 browser-compat: api.URLSearchParams.forEach
 ---
-{{APIRef("URL API")}}
+
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 The **`forEach()`** method of the
 {{domxref("URLSearchParams")}} interface allows iteration through all values contained
 in this object via a callback function.
 
-{{availableinworkers}}
-
 ## Syntax
 
-```js
+```js-nolint
 forEach(callback)
 forEach(callback, thisArg)
 ```
@@ -49,17 +43,17 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // Create a test URLSearchParams object
-var searchParams = new URLSearchParams("key1=value1&key2=value2");
+const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Log the values
-searchParams.forEach(function(value, key) {
+searchParams.forEach((value, key) => {
   console.log(value, key);
 });
 ```
 
 The result is:
 
-```
+```plain
 value1 key1
 value2 key2
 ```

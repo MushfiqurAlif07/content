@@ -1,22 +1,19 @@
 ---
-title: Window.frameElement
+title: "Window: frameElement property"
+short-title: frameElement
 slug: Web/API/Window/frameElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
-  - Window
 browser-compat: api.Window.frameElement
 ---
+
 {{ApiRef}}
 
 The **`Window.frameElement`** property
 returns the element (such as {{HTMLElement("iframe")}} or {{HTMLElement("object")}})
 in which the window is embedded.
 
-> **Note:** Despite this property's name, it works for documents embedded
+> [!NOTE]
+> Despite this property's name, it works for documents embedded
 > within any embedding point, including {{HTMLElement("object")}},
 > {{HTMLElement("iframe")}}, or {{HTMLElement("embed")}}.
 
@@ -24,7 +21,7 @@ in which the window is embedded.
 
 The element which the window is embedded into. If the window isn't embedded into
 another document, or if the document into which it's embedded has a different
-{{glossary("origin")}}, the value is {{jsxref("null")}} instead.
+{{glossary("origin")}}, the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) instead.
 
 ## Examples
 
@@ -32,7 +29,7 @@ another document, or if the document into which it's embedded has a different
 const frameEl = window.frameElement;
 // If we're embedded, change the containing element's URL to 'https://mozilla.org/'
 if (frameEl) {
-  frameEl.src = 'https://mozilla.org/';
+  frameEl.src = "https://mozilla.org/";
 }
 ```
 
